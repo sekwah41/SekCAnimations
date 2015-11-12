@@ -1,0 +1,16 @@
+[
+{
+  "modid": "sekcanims",
+  "name": "SekCAnimations",
+  "description": "An Animation API made by sekwah origionally designed for his mods.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["sekwah41"],
+  "credits": "You SekC people for constantly motivating me ;3",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
