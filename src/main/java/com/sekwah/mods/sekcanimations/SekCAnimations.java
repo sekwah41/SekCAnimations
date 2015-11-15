@@ -12,8 +12,10 @@ import org.apache.logging.log4j.Logger;
  * TODO add the option for specific positions or weights.
  */
 @Mod(modid = SekCAnimations.modid, name = "SekCAnimations", version = SekCAnimations.version)
+
 public class SekCAnimations {
     public static final String modid = "sekcanims";
+
     public static final Logger LOGGER = LogManager.getLogger("SekCAnimations");
 
     // TODO for the lang files possibly use the \u0007 character code thing and see if that works for accents
