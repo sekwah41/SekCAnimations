@@ -22,7 +22,7 @@ group= "com.sekwah.sekcanimations" // http://maven.apache.org/guides/mini/guide-
 archivesBaseName = "sekcanims"
 
 minecraft {
-    version = "1.7.10-10.13.2.1291"
+    version = "1.7.10-10.13.0.1160"
     runDir = "eclipse"
 }
 
