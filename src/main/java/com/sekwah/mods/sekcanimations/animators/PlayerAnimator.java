@@ -7,6 +7,8 @@ import com.sekwah.mods.sekcanimations.animdata.Pose;
  */
 public class PlayerAnimator extends Animator {
 
+    // Make a hashmap of player pose data here to the entity id
+
     public static Pose[] playerPoses;
 
 
