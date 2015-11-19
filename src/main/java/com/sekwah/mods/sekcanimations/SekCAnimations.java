@@ -16,8 +16,10 @@ import org.apache.logging.log4j.Logger;
  * TODO add the option for specific positions or weights.
  */
 @Mod(modid = SekCAnimations.modid, name = "SekCAnimations", version = SekCAnimations.version)
+
 public class SekCAnimations {
     public static final String modid = "sekcanims";
+
     public static final Logger LOGGER = LogManager.getLogger("SekCAnimations");
 
     @SidedProxy(clientSide = "com.sekwah.mods.narutomod.client.ClientProxy", serverSide = "com.sekwah.mods.narutomod.generic.CommonProxy")
