@@ -1,4 +1,4 @@
-package com.sekwah.mods.sekcanimations.server;
+package sekwah.mods.sekcanimations.server;
 
 public class ServerProxy {
 

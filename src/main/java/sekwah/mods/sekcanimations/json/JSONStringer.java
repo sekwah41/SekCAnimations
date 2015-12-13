@@ -1,4 +1,4 @@
-package com.sekwah.mods.sekcanimations.json;
+package sekwah.mods.sekcanimations.json;
 
 /*
 Copyright (c) 2006 JSON.org

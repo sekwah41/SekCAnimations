@@ -1,4 +1,4 @@
-package com.sekwah.mods.sekcanimations.json;
+package sekwah.mods.sekcanimations.json;
 
 /**
  * The JSONException is thrown by the JSON.org classes when things are amiss.

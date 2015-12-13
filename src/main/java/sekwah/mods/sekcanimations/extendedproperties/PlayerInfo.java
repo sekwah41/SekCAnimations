@@ -1,4 +1,4 @@
-package com.sekwah.mods.sekcanimations.extendedproperties;
+package sekwah.mods.sekcanimations.extendedproperties;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;

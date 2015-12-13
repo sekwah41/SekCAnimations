@@ -1,4 +1,4 @@
-package com.sekwah.mods.sekcanimations.json;
+package sekwah.mods.sekcanimations.json;
 
 import java.io.*;
 

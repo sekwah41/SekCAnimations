@@ -1,9 +1,9 @@
-package com.sekwah.mods.sekcanimations;
+package sekwah.mods.sekcanimations;
 
-import com.sekwah.mods.sekcanimations.animators.EntityAnimator;
-import com.sekwah.mods.sekcanimations.animators.PlayerAnimator;
-import com.sekwah.mods.sekcanimations.animators.TileBlockAnimator;
-import com.sekwah.mods.sekcanimations.server.ServerProxy;
+import sekwah.mods.sekcanimations.animators.EntityAnimator;
+import sekwah.mods.sekcanimations.animators.PlayerAnimator;
+import sekwah.mods.sekcanimations.animators.TileBlockAnimator;
+import sekwah.mods.sekcanimations.server.ServerProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -22,7 +22,7 @@ public class SekCAnimations {
 
     public static final Logger LOGGER = LogManager.getLogger("SekCAnimations");
 
-    @SidedProxy(clientSide = "com.sekwah.mods.narutomod.client.ClientProxy", serverSide = "com.sekwah.mods.narutomod.generic.CommonProxy")
+    @SidedProxy(clientSide = "sekwah.mods.narutomod.client.ClientProxy", serverSide = "sekwah.mods.narutomod.generic.CommonProxy")
     public static ServerProxy proxy;
 
     // TODO make the SekC animator say in the chat when you join if there is an update available.

@@ -1,4 +1,4 @@
-package com.sekwah.mods.sekcanimations.json;
+package sekwah.mods.sekcanimations.json;
 
 /**
  * The <code>JSONString</code> interface allows a <code>toJSONString()</code>

@@ -1,4 +1,4 @@
-package com.sekwah.mods.sekcanimations.animdata;
+package sekwah.mods.sekcanimations.animdata;
 
 
 public class PartData {
