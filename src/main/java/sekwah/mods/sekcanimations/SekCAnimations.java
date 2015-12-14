@@ -1,15 +1,18 @@
 package sekwah.mods.sekcanimations;
 
-import sekwah.mods.sekcanimations.animators.EntityAnimator;
-import sekwah.mods.sekcanimations.animators.PlayerAnimator;
-import sekwah.mods.sekcanimations.animators.TileBlockAnimator;
-import sekwah.mods.sekcanimations.server.ServerProxy;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import sekwah.mods.sekcanimations.animators.EntityAnimator;
+import sekwah.mods.sekcanimations.animators.PlayerAnimator;
+import sekwah.mods.sekcanimations.animators.TileBlockAnimator;
+import sekwah.mods.sekcanimations.common.CommonProxy;
 
 /**
  * Created by sekwah on 12/11/2015.
@@ -20,18 +23,29 @@ import org.apache.logging.log4j.Logger;
 public class SekCAnimations {
     public static final String modid = "sekcanims";
 
-    public static final Logger LOGGER = LogManager.getLogger("SekCAnimations");
+    public static final String version = "0.0.1";
 
-    @SidedProxy(clientSide = "sekwah.mods.narutomod.client.ClientProxy", serverSide = "sekwah.mods.narutomod.generic.CommonProxy")
-    public static ServerProxy proxy;
+    public static final Logger logger = LogManager.getLogger("SekCAnims");
+
+    @SidedProxy(clientSide = "sekwah.mods.sekcanimations.client.ClientProxy", serverSide = "sekwah.mods.sekcanimations.common.CommonProxy")
+    public static CommonProxy proxy;
 
     // TODO make the SekC animator say in the chat when you join if there is an update available.
-
-    public static final String version = "0.0.1";
 
     public static PlayerAnimator playerAnimator;
     private EntityAnimator entityAnimator;
     private TileBlockAnimator blockAnimator;
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event){
+        // In case it is ever decided that config variables are needed.
+        //File configFolder = event.getModConfigurationDirectory();
+
+        sekwah.mods.sekcanimations.common.EventHandler eventHandler = new sekwah.mods.sekcanimations.common.EventHandler();
+
+        MinecraftForge.EVENT_BUS.register(eventHandler);
+        FMLCommonHandler.instance().bus().register(eventHandler);
+    }
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
@@ -43,5 +57,7 @@ public class SekCAnimations {
         /*blockAnimator = new TileBlockAnimator();*/ // TODO add block animator if felt neccesary(may never need it though for blocks like the cybernetic workbench it would be great)
 
     }
+
+
 
 }
