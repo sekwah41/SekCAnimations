@@ -19,7 +19,6 @@ import sekwah.mods.sekcanimations.common.CommonProxy;
  * TODO add the option for specific positions or weights.
  */
 @Mod(modid = SekCAnimations.modid, name = "SekCAnimations", version = SekCAnimations.version)
-
 public class SekCAnimations {
     public static final String modid = "sekcanims";
 
