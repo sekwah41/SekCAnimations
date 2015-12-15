@@ -22,6 +22,9 @@ import java.util.HashMap;
  */
 public class TickHandlerClient {
 
+    // TODO more hashmaps will be needed for entity animatiors and such. Possibly add a system where if the maps are not updated
+    // for more than a certain time they are removed, and if a player or whatever comes into range without data it renders normal until
+    // the data is retrieved or some other systems, just try to add efficiency to the system ;)
     public HashMap<String, AnimationDataClient> playerAnimData = new HashMap<String, AnimationDataClient>();
 
     @SubscribeEvent
