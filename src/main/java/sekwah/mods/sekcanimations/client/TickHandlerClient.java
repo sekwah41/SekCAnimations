@@ -22,7 +22,7 @@ import java.util.HashMap;
  */
 public class TickHandlerClient {
 
-    public HashMap<String, AnimationDataClient> playerMorphInfo = new HashMap<String, AnimationDataClient>();
+    public HashMap<String, AnimationDataClient> playerAnimData = new HashMap<String, AnimationDataClient>();
 
     @SubscribeEvent
     public void renderTick(TickEvent.RenderTickEvent event){
