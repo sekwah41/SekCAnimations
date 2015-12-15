@@ -4,6 +4,8 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import net.minecraft.client.Minecraft;
 
+import java.util.HashMap;
+
 /**
  * Created on 14/12/2015.
  *
@@ -19,6 +21,8 @@ import net.minecraft.client.Minecraft;
  * @author sekwah41
  */
 public class TickHandlerClient {
+
+    public HashMap<String, AnimationDataClient> playerMorphInfo = new HashMap<String, AnimationDataClient>();
 
     @SubscribeEvent
     public void renderTick(TickEvent.RenderTickEvent event){

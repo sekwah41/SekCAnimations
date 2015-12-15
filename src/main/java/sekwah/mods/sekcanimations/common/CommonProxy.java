@@ -6,4 +6,8 @@ public class CommonProxy {
 
     }
 
+    public TickHandlerServer tickHandlerServer;
+
+    public TickHandlerServer tickHandlerClient;
+
 }
