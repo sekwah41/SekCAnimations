@@ -17,6 +17,8 @@ import sekwah.mods.sekcanimations.common.CommonProxy;
 /**
  * Created by sekwah on 12/11/2015.
  * TODO add the option for specific positions or weights.
+ *
+ * TODO use the gson library inbuilt to one of the libraries minecraft uses :D
  */
 @Mod(modid = SekCAnimations.modid, name = "SekCAnimations", version = SekCAnimations.version)
 public class SekCAnimations {

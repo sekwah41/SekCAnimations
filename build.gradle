@@ -42,6 +42,25 @@ dependencies {
 
 }
 
+task devJar(type: Jar) {
+    description 'Creates a compiled version for other developers to use in their workspaces.'
+    from sourceSets.main.output
+    classifier = 'dev'
+}
+
+task sourceJar(type: Jar) {
+    description 'Outputs the source code into a jar file.'
+    from sourceSets.main.java
+    from new File(root, "dev")
+    classifier = 'src'
+}
+
+task buildAll(type: GradleBuild) {
+    description "Runs all compile tasks(Doesn't build the fully compiled yet)"
+    devJar.execute()
+    sourceJar.execute()
+}
+
 processResources
 {
     // this will ensure that this task is redone when the versions change.
