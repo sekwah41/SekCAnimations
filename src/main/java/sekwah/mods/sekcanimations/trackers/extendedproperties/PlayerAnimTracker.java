@@ -1,35 +1,36 @@
-package sekwah.mods.sekcanimations.extendedproperties;
+package sekwah.mods.sekcanimations.trackers.extendedproperties;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
-import net.minecraftforge.common.IExtendedEntityProperties;
+import sekwah.mods.sekcanimations.animdata.Pose;
 
-public class PlayerInfo implements IExtendedEntityProperties
+import java.util.ArrayList;
+
+public class PlayerAnimTracker extends BaseAnimTracker
 {
 
     // TODO can be used to save data but in this case the extended properties is just used to track all animation data on players
     // TODO create extended properties for entities, or use a range of the datawatchers. Whatever is best.
-    public final static String IDENTIFIER = "sekcanimations_playerdata";
-
-    // could be usefull but not currently used, also this will only exist on a player and will not change so its reasonably safe
-    private final EntityPlayer player;
-
-    private String currentPose = "default";
+    public final static String IDENTIFIER = "sekcanimations_animdata";
 
     /*
     The default constructor takes no arguments, but I put in the Entity so I can initialize the above variable 'player'
 
     Also, it's best to initialize any other variables you may have added, just like in any constructor.
     */
-    public PlayerInfo(EntityPlayer player)
+    public PlayerAnimTracker(EntityPlayer player)
     {
-        this.player = player;
+        super(player);
     }
 
-    public String getPoseName(){
-        return this.currentPose;
+    public ArrayList<Pose> activePoses(){
+        return this.basePoses;
+    }
+
+    public EntityPlayer getPlayer(){
+        return (EntityPlayer) entity;
     }
 
     /**
@@ -38,16 +39,16 @@ public class PlayerInfo implements IExtendedEntityProperties
      */
     public static final void register(EntityPlayer player)
     {
-        player.registerExtendedProperties(PlayerInfo.IDENTIFIER, new PlayerInfo(player));
+        player.registerExtendedProperties(PlayerAnimTracker.IDENTIFIER, new PlayerAnimTracker(player));
     }
 
     /**
      * Returns ExtendedPlayer properties for player
      * This method is for convenience only
      */
-    public static final PlayerInfo get(EntityPlayer player)
+    public static final PlayerAnimTracker get(EntityPlayer player)
     {
-        return (PlayerInfo) player.getExtendedProperties(IDENTIFIER);
+        return (PlayerAnimTracker) player.getExtendedProperties(IDENTIFIER);
     }
 
     // Save any custom data that needs saving here

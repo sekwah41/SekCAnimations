@@ -2,8 +2,14 @@ package sekwah.mods.sekcanimations.animators;
 
 import sekwah.mods.sekcanimations.animdata.Pose;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
- * Created by sekwah on 12/11/2015.
+ * Add the option to use a different animation calculation. E.g. try a few linear ones and different animation
+ * types such as a sin wave or ease in.(ease in would probably be best just doing dividing the current distance
+ * and using a delta factor to keep it in time)
+ * The calculating velocity and using some sort of countdown would mostly be good for linear animations(i think)
  */
 public class PlayerAnimator extends Animator {
 
@@ -33,7 +39,10 @@ public class PlayerAnimator extends Animator {
      */
 
 
-    public static Pose[] playerPoses;
+    // TODO Find the size limit for the hashmaps and see how big you need to make it or what you need to do
+    public static Map<String,Pose> poses = new HashMap<String,Pose>();
+
+    //public static Pose[] playerPoses;
 
 
 

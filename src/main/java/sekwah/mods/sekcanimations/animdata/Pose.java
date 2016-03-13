@@ -27,5 +27,4 @@ public class Pose {
         this.poseName = poseName;
         this.partData = partData;
     }
-
 }

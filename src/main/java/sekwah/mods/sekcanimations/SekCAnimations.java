@@ -13,6 +13,7 @@ import sekwah.mods.sekcanimations.animators.EntityAnimator;
 import sekwah.mods.sekcanimations.animators.PlayerAnimator;
 import sekwah.mods.sekcanimations.animators.TileBlockAnimator;
 import sekwah.mods.sekcanimations.common.CommonProxy;
+import sekwah.mods.sekcanimations.common.EventHook;
 
 /**
  * Created by sekwah on 12/11/2015.
@@ -42,7 +43,7 @@ public class SekCAnimations {
         // In case it is ever decided that config variables are needed.
         //File configFolder = event.getModConfigurationDirectory();
 
-        sekwah.mods.sekcanimations.common.EventHandler eventHandler = new sekwah.mods.sekcanimations.common.EventHandler();
+        EventHook eventHandler = new EventHook();
 
         MinecraftForge.EVENT_BUS.register(eventHandler);
         FMLCommonHandler.instance().bus().register(eventHandler);

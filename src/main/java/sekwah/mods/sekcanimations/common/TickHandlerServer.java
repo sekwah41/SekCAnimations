@@ -7,4 +7,5 @@ package sekwah.mods.sekcanimations.common;
  * @author sekwah41
  */
 public class TickHandlerServer {
+
 }

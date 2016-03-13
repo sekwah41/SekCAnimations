@@ -8,7 +8,7 @@ import cpw.mods.fml.common.network.FMLNetworkEvent;
  *
  * @author sekwah41
  */
-public class EventHandler {
+public class EventHook {
 
 
 
