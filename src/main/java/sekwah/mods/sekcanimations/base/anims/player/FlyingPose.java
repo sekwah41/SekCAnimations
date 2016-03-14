@@ -8,6 +8,8 @@ import net.minecraft.util.MathHelper;
 import sekwah.mods.sekcanimations.animdata.DynamicPose;
 import sekwah.mods.sekcanimations.animdata.PartData;
 
+import java.util.HashMap;
+
 public class FlyingPose extends DynamicPose {
 
     private final PartData rightArmUpper;
@@ -25,45 +27,41 @@ public class FlyingPose extends DynamicPose {
     public FlyingPose() {
         super("flying");
 
-        partData = new PartData[11];
+        //partData = new PartData[11];
+        partData = new HashMap<String, PartData>();
         rightArmUpper = new PartData("rightArmUpper", true, true);
-        partData[0] = rightArmUpper;
+        partData.put("rightArmUpper", rightArmUpper);
         rightArmLower = new PartData("rightArmLower", false, true);
-        partData[1] =rightArmLower;
+        partData.put("rightArmLower", rightArmLower);
+
         leftArmUpper = new PartData("leftArmUpper", true, true);
-        partData[2] = leftArmUpper;
+        partData.put("leftArmUpper", leftArmUpper);
         leftArmLower = new PartData("leftArmLower", false, true);
-        partData[3] = leftArmLower;
+        partData.put("leftArmLower", leftArmLower);
         head = new PartData("head", true, true);
-        partData[4] = head;
+        partData.put("head", head);
         upperBody = new PartData("upperBody", true, true);
-        partData[5] = upperBody;
+        partData.put("upperBody", upperBody);
         lowerBody = new PartData("lowerBody", true, true);
-        partData[6] = lowerBody;
+        partData.put("lowerBody", lowerBody);
         rightLegUpper = new PartData("rightLegUpper", true, true);
-        partData[7] = rightLegUpper;
+        partData.put("rightLegUpper", rightLegUpper);
         rightLegLower = new PartData("rightLegLower", false, true);
-        partData[8] =rightLegLower;
+        partData.put("rightLegLower", rightLegLower);
         leftLegUpper = new PartData("leftLegUpper", true, true);
-        partData[9] = leftLegUpper;
+        partData.put("leftLegUpper", leftLegUpper);
         leftLegLower = new PartData("leftLegLower", false, true);
-        partData[10] = leftLegLower;
-
-        hasRotation = true;
-
-        rotateAngleX = 90;
-        rotateAngleY = 0;
-        rotateAngleZ = 0;
+        partData.put("leftLegLower", leftLegLower);
 
         // TODO need to add a part sorter or use a hash map
         //partData = DBZAnimator.sortParts(partData);
     }
 
     public void updatePose(float par1, float par2, float par3, float par4, float par5, float par6, Entity par7Entity, float... args) {
-        // TODO add code to update the part data and all sorts
-        // TODO test and finish flying animation
-        // SUCCESS ^.^ F**KING BRILLIANT JIM(there is noone on the team called jim but whatever)
         //leftArmUpper.rotateAngleY = (float) Math.random * 3F;
+
+
+        // TODO recode the part positions and rotations for the new model.
 
         // TODO add code to do the punching animation
 
@@ -152,7 +150,7 @@ public class FlyingPose extends DynamicPose {
         rightLegUpper.rotateAngleX = (rightLegUpper.rotateAngleX * (1 - headAngleChange)) + (headAngleChange * -0.4F);
 
 
-
+        // Arm swinging code
         /*if (args[0] > -9990.0F) {
             float f6 = args[0];
             upperBody.rotateAngleY = MathHelper.sin(MathHelper.sqrt_float(f6) * (float) Math.PI * 2.0F) * 0.2F;
