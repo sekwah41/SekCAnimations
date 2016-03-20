@@ -58,7 +58,6 @@ public class FlyingPose extends DynamicPose {
     }
 
     public void updatePose(float par1, float par2, float par3, float par4, float par5, float par6, Entity par7Entity, float... args) {
-        //leftArmUpper.rotateAngleY = (float) Math.random * 3F;
 
 
         // TODO recode the part positions and rotations for the new model.
@@ -71,11 +70,7 @@ public class FlyingPose extends DynamicPose {
         double ySpeed = player.posY - player.prevPosY;
         double zSpeed = player.posY - player.prevPosZ;
 
-        //System.out.println(par2);
-
         double speed = Math.sqrt(Math.pow(xSpeed,2) + Math.pow(ySpeed,2) + Math.pow(zSpeed,2));
-
-        //System.out.println(speed);
 
         float bobbing = MathHelper.cos(par3 * 0.09F + 0.2F);
 
