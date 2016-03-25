@@ -1,6 +1,6 @@
 package sekwah.mods.sekcanimations.common;
 
-import cpw.mods.fml.common.FMLCommonHandler;
+import net.minecraftforge.common.MinecraftForge;
 import sekwah.mods.sekcanimations.client.TickHandlerClient;
 
 public class CommonProxy {
@@ -12,7 +12,8 @@ public class CommonProxy {
     public void initTickHandlers()
     {
         tickHandlerServer = new TickHandlerServer();
-        FMLCommonHandler.instance().bus().register(tickHandlerServer);
+
+        MinecraftForge.EVENT_BUS.register(tickHandlerServer);
     }
 
     public TickHandlerServer tickHandlerServer;

@@ -4,7 +4,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.MathHelper;
+import net.minecraft.util.math.MathHelper;
 import sekwah.mods.sekcanimations.animdata.DynamicPose;
 import sekwah.mods.sekcanimations.animdata.PartData;
 
@@ -171,9 +171,10 @@ public class FlyingPose extends DynamicPose {
         if (itemstack != null && player.getItemInUseCount() > 0) {
             EnumAction enumaction = itemstack.getItemUseAction();
 
-            if (enumaction == EnumAction.block) {
+            if (enumaction == EnumAction.BLOCK) {
                 rightArmUpper.rotateAngleX -= 0.3;
-            } else if (enumaction == EnumAction.bow) {
+                // 1.9 block anim has changed
+            } else if (enumaction == EnumAction.BLOCK) {
                 rightArmUpper.rotateAngleZ = 0.0F;
                 leftArmUpper.rotateAngleZ = 0.0F;
                 rightArmUpper.rotateAngleY = -(0.1F) + head.rotateAngleY;
