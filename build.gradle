@@ -21,11 +21,11 @@ plugins {
 }
 */
 version = "1.0"
-group= "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "modid"
+group= "sekwah.mods.sekcanimations" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "SekCAnims"
 
 minecraft {
-    version = "1.9-12.16.0.1776-1.9"
+    version = "1.10.2-12.18.1.2026"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
