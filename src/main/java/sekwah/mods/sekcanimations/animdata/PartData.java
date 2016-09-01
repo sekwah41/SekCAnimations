@@ -7,13 +7,18 @@ public class PartData {
 
     // LocationData
     public boolean[] hasPos = {false, false, false};
-    public float rotationPointX = 0;
-    public float rotationPointY = 0;
-    public float rotationPointZ = 0;
+    public float rotationPointX;
+    public float rotationPointY;
+    public float rotationPointZ;
     public boolean[] shouldRot = {false, false, false};
-    public float rotateAngleX = 0;
-    public float rotateAngleY = 0;
-    public float rotateAngleZ = 0;
+    public float rotateAngleX;
+    public float rotateAngleY;
+    public float rotateAngleZ;
+
+    public float lastAnimTime;
+    public float animTime;
+
+    public String currentAnim;
 
     public PartData(String partName) {
         this.partName = partName;
