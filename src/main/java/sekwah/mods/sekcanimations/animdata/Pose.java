@@ -4,6 +4,9 @@ package sekwah.mods.sekcanimations.animdata;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * General static pose
+ */
 public class Pose {
 
     public String poseName;
@@ -12,16 +15,16 @@ public class Pose {
 
     public String nextPose;
 
-    public int completeAction = 0;
+    public int completeAction;
 
     public Map<String, PartData> partData = new HashMap<String,PartData>();
     //public PartData[] partData;
 
     public boolean hasRotation = false;
 
-    public float rotateAngleX = 0;
-    public float rotateAngleY = 0;
-    public float rotateAngleZ = 0;
+    public float rotateAngleX;
+    public float rotateAngleY;
+    public float rotateAngleZ;
 
     public Pose(String poseName) {
         this.poseName = poseName;
