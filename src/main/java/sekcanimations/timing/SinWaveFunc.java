@@ -1,9 +1,10 @@
 package sekcanimations.timing;
 
-public class SinWaveFunc implements TimingFunction {
+public class SinWaveFunc extends TimingFunction {
 
-    @Override
+
     public float progress(float currentTime, float lastTime, float startTime, float endTime) {
+
         return 0;
     }
 }

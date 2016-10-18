@@ -1,9 +1,13 @@
 package sekcanimations.timing;
 
-public class LinearFunc implements TimingFunction {
+public class LinearFunc extends TimingFunction {
 
-    @Override
+
     public float progress(float currentTime, float lastTime, float startTime, float endTime) {
-        return 0;
+        float oldTime = currentTime - startTime;
+        float time = currentTime - startTime;
+        float length = endTime - startTime;
+
+        return this.percentRemaining(time / length, oldTime / length);
     }
 }
