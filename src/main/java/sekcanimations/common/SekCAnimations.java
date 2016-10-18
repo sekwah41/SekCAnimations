@@ -19,6 +19,9 @@ import sekcanimations.common.core.CommonProxy;
  * Created by sekwah on 12/11/2015.
  * TODO add the option for specific positions or weights.
  *
+ * TODO I still need to make a maven server to build the mods so people can get dependencies a lot easier. For now it'll
+ * be manually add them but ill look into it once this library is released.
+ *
  * TODO use the gson library inbuilt to one of the libraries minecraft uses :D
  */
 @Mod(modid = SekCAnimations.modid, name = "SekCAnimations", version = SekCAnimations.version)

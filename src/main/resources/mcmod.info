@@ -2,7 +2,7 @@
 {
   "modid": "sekcanims",
   "name": "SekCAnimations",
-  "description": "An Animation API made by sekwah origionally designed for his mods.",
+  "description": "An Animation mod and library. It's a much newer version of the animation code running the Naruto mod.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
