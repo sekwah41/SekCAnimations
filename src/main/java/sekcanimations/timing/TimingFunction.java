@@ -10,6 +10,8 @@ public interface TimingFunction {
     /**
      * Amount to move to the next position.
      *
+     * Maybe the inputs should be changed to stuff like length (of anim) and time rather than its start and stop times
+     *
      * @param currentTime
      * @param duration
      * @return
