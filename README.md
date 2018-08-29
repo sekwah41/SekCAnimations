@@ -1,2 +1,2 @@
 # SekCAnimations
-An Animation API by sekwah
+This will be a animation mod for mc using SekCLib
